@@ -1,0 +1,32 @@
+.card {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+img {
+  height: 420px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.description-text {
+  font-size: 13px;
+}
+
+.btn-card {
+  border-radius: 100%;
+  margin: 0 2px;
+}
+
+.page-link {
+  color: gray;
+}
+
+.pagination {
+  --bs-pagination-border-width: 0px;
+}
+
+.page-link {
+  background-color: white;
+  cursor: pointer;
+}

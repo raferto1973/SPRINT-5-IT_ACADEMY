@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row mt-5 justify-content-center">
+    <div class="card rounded-5 mx-3" style="width: 18rem; height: 45rem;">
+      <img src="{{ steps[currentStep].img }}" class="card-img-top text-bg-{{ steps[currentStep].bgcolor }}" alt="">
+      <div class="card-body">
+        <h5 class="card-title fw-bold mt-4">{{ steps[currentStep].title }}</h5>
+        <p class="card-text fw-light mt-3 description-text">{{ steps[currentStep].description }}</p>
+        <div class="row align-items-center">
+          <div class="col-6">
+            <nav aria-label="..." class="d-flex justify-content-start">
+              <ul class="pagination pagination-sm">
+                <li class="page-item" [class.active]="currentStep === i" *ngFor="let step of steps; index as i">
+                  <span class="page-link" (click)="currentStep = i">{{ currentStep === i ? '█' : '•' }}</span>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-6">
+            <div class="button-nav d-flex justify-content-end">
+              <button type="button" class="btn btn-outline-dark btn-card fs-2" (click)="previousStep()"
+                *ngIf="currentStep > 0">←</button>
+              <button type="button" class="btn btn-outline-dark btn-card fs-2" (click)="nextStep()"
+                *ngIf="currentStep < steps.length - 1">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
