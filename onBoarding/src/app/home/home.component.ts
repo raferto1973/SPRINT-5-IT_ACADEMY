@@ -16,4 +16,4 @@ export class HomeComponent {
   constructor(private stepsService: StepsService) {
     this.steps = this.stepsService.getSteps();
   }
-}
+} 

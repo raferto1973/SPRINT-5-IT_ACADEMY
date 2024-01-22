@@ -13,4 +13,4 @@ import { EscenaComponent } from './escena/escena.component';
 })
 export class AppComponent {
   title = 'onBoarding';
-}
+} 
